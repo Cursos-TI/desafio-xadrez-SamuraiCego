@@ -1,32 +1,58 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main(){
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+// Declarando previamente a variavel das peças
+int torre, bispo = 1, rainha = 1, cavalo;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+printf("Movimento da Torre:\n"); // printf para identificar qual peça está se movendo no momento
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+for (torre = 1; torre <= 5; torre++){
+    printf("Direita\n"); // Demonstrando o movimento da torre
+    
+} // utilizando for para imprimir "direita" 5 vezes, parando o código assim que a variavel torre atinge o valor de 6
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+printf("\n"); // Pulando uma linha para separar cada movimento de peça
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+printf("Movimento do Bispo:\n"); // printf para identificar qual peça está se movendo no momento
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+while (bispo <= 5){ 
+    printf("Cima, Direita\n"); // Demonstrando o movimento do bispo
+    bispo++;
+    
+} // utilizando while para imprimir "Cima, Direita" 5 vezes, parando o código assim que a variavel bispo atinge o valor de 6
 
-    return 0;
+printf("\n"); // Pulando uma linha para separar cada movimento de peça
+
+printf("Movimento da Rainha:\n"); // printf para identificar qual peça está se movendo no momento
+
+do{
+    printf("Esquerda\n"); // Demonstrando o movimento da rainha
+    rainha++;
+    
+}while(rainha <=8); // utilizando do while para imprimir "Esquerda" 8 vezes, parando o código assim que a variavel torre atinge o valor de 9
+
+printf("\n"); // Pulando uma linha para separar cada movimento de peça
+
+printf("Movimento Cavalo:\n"); // printf para identificar qual peça está se movendo no momento
+
+for(cavalo=1; cavalo<=1; cavalo++){ // utilizando for para executar o movimento de baixo duas vezes dentro do loop interno antes de imprimir o movimento de esquerda
+       do{
+        printf("Baixo\n"); 
+        cavalo++;
+       }while(cavalo<=2); // utilizando do while para imprimir 'baixo' e depois adicionar 1 a variavel cavalo, repetindo até cavalo ser 3
+       printf("Esquerda\n"); // imprimindo 'esquerda' após o do while imprimir baixo duas vezes
+       
+
+}
+
+
+
+
+return 0;
+
+
+
+
 }
